@@ -34,17 +34,17 @@ const segmentsData = [{
     content: "This is segment 1.",
 }, {
     start: "01:00",
-    end: "02:00",
+    end: "01:40",
     title: "Segment 2",
     content: "This is segment 2.",
 }, {
-    start: "02:00",
-    end: "03:00",
+    start: "01:40",
+    end: "02:00",
     title: "Segment 3",
     content: "This is segment 3.",
 }, {
-    start: "03:00",
-    end: "03:30",
+    start: "02:20",
+    end: "02:50",
     title: "Segment 4",
     content: "This is segment 4.",
 }];
