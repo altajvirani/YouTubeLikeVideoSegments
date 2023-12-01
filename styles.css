@@ -29,10 +29,6 @@ body {
   box-shadow: 0rem 0rem 3rem -0.4rem rgba(191, 196, 198, 0.889);
 }
 
-.vjs-marker.custom-marker-class {
-  background-color: #ff4500;
-}
-
 .vjs-time-tooltip {
   width: max-content;
   white-space: pre-line;
