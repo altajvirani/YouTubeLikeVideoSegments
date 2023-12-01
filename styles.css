@@ -15,6 +15,7 @@ body {
 
 .main-cont {
   display: flex;
+  flex-direction: row;
   align-items: start;
   justify-content: center;
   width: 100%;
@@ -23,8 +24,9 @@ body {
 
 .video-cont {
   width: 80rem;
-  border-radius: 1rem;
+  border-radius: 1.5rem;
   overflow: hidden;
+  box-shadow: 0rem 0rem 3rem -0.4rem rgba(191, 196, 198, 0.889);
 }
 
 .vjs-marker.custom-marker-class {
@@ -41,9 +43,10 @@ body {
   flex-direction: column;
   width: 30rem;
   min-height: 100%;
-  margin-left: 2rem;
+  margin-left: 3rem;
   border: 0.15rem solid rgb(194, 200, 210);
-  border-radius: 1rem;
+  border-radius: 1.5rem;
+  box-shadow: 0rem 0rem 5rem -0.2rem rgba(0, 0, 0, 0.155);
 }
 
 .video-segments span {
@@ -60,23 +63,19 @@ body {
 }
 
 .segment {
+  margin: 1rem 1rem 0 1rem;
   padding: 1rem 1.5rem;
   cursor: pointer;
-  border-bottom: 0.1rem solid rgb(194, 200, 210);
+  border: 0.1rem solid rgb(194, 200, 210);
+  border-radius: 0.75rem;
+  transition: box-shadow, transform 150ms;
 }
 
 .segment:hover {
-  background-color: rgb(240, 242, 245);
+  box-shadow: 0rem 0rem 3rem -0.4rem rgba(191, 196, 198, 0.889);
+  transform: scale(1.02);
 }
 
 .segment.active {
   font-weight: 600;
-}
-
-@media (max-width: 768px) {
-  .video-cont {
-    width: 80rem;
-    border-radius: 1rem;
-    overflow: hidden;
-  }
 }
