@@ -94,7 +94,7 @@ segmentsData.map((segment, key) => {
         player.currentTime(timeStringToSeconds(segment.start)/60);
     }
     const timeStamp = document.createElement('div');
-    timeStamp.setAttribute("style", "background-color: #263850; position: absolute; margin-top: 0.6rem; margin-bottom: 0.6rem; top: 0; bottom: 0; right: 0.6rem; border-radius: 0.6rem; padding: 0.4rem 0.8rem; display: flex; align-items: center; justify-content:center");
+    timeStamp.setAttribute("style", "background-color: #C2EBF0; position: absolute; margin-top: 0.6rem; margin-bottom: 0.6rem; top: 0; bottom: 0; right: 0.6rem; border-radius: 0.6rem; padding: 0.4rem 0.8rem; display: flex; align-items: center; justify-content:center");
     timeStamp.textContent = segment.start;
     div.appendChild(timeStamp);
 });
