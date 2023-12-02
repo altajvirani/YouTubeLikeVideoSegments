@@ -29,9 +29,50 @@ body {
   box-shadow: 0rem 0rem 3rem -0.4rem rgba(191, 196, 198, 0.889);
 }
 
-.vjs-time-tooltip {
+.video-js
+  .vjs-control-bar
+  .vjs-progress-control
+  .vjs-progress-holder
+  .vjs-mouse-display
+  .vjs-time-tooltip {
   width: max-content;
   white-space: pre-line;
+  border-radius: 1rem;
+}
+
+.video-js
+  .vjs-control-bar
+  .vjs-progress-control
+  .vjs-progress-holder
+  .vjs-load-progress {
+  background-color: #bce9e9b6;
+}
+
+.video-js
+  .vjs-control-bar
+  .vjs-progress-control
+  .vjs-progress-holder
+  .vjs-play-progress {
+  background-color: #ffff00;
+}
+
+.video-js
+  .vjs-control-bar
+  .vjs-progress-control
+  .vjs-progress-holder
+  .vjs-slider-bar {
+  background-color: #cff6ff;
+}
+
+.video-js .vjs-slider,
+.video-js .vjs-play-progress {
+  color: #00bfff;
+}
+
+.video-js .vjs-control-bar {
+  justify-content: space-between;
+  padding: 0 0.5rem;
+  border-radius: 1em;
 }
 
 .video-segments {
@@ -40,7 +81,7 @@ body {
   width: 30rem;
   min-height: 100%;
   margin-left: 3rem;
-  border: 0.15rem solid rgb(194, 200, 210);
+  border: 0.15rem solid #c2c9d3;
   border-radius: 1.5rem;
   box-shadow: 0rem 0rem 5rem -0.2rem rgba(0, 0, 0, 0.155);
 }
@@ -49,20 +90,25 @@ body {
   padding: 1.3rem 1.5rem 1rem 1.5rem;
   font-weight: bold;
   font-size: 1.5rem;
-  color: rgb(48, 54, 60);
+  color: #30363c;
+}
+
+.video-segments .title {
+  background-color: #e8f1fd;
+  border-radius: 1.4rem 1.4rem 0rem 0rem;
 }
 
 .divider {
   width: 100%;
   height: 0;
-  border-top: 0.1rem solid rgb(194, 200, 210);
+  border-top: 0.1rem solid #c2c9d3;
 }
 
 .segment {
   margin: 1rem 1rem 0 1rem;
   padding: 1rem 1.5rem;
   cursor: pointer;
-  border: 0.1rem solid rgb(194, 200, 210);
+  border: 0.1rem solid #c2c9d3;
   border-radius: 0.75rem;
   transition: box-shadow, transform 150ms;
 }

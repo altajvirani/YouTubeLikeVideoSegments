@@ -60,7 +60,6 @@ else {
 
 function onLoadedMetadata() {
     segmentsData.forEach((segment) => {
-        console.log(timeStringToSeconds(segment.start), player.duration())
         const markerPosition = (timeStringToSeconds(segment.start)/60 / player.duration()) * 100;
     
         const marker = document.createElement("div");
@@ -80,7 +79,7 @@ function onLoadedMetadata() {
             position: absolute;
             width: 0.8rem;
             height: 100%;
-            background-color: #de3c3c;
+            background-color: #d41f1f;
         }
     `;
     document.head.appendChild(markerStyle);
@@ -98,7 +97,7 @@ segmentsData.map((segment, key) => {
         player.currentTime(timeStringToSeconds(segment.start)/60);
     }
     const timeStamp = document.createElement('div');
-    timeStamp.setAttribute("style", "background-color: #C2EBF0; position: absolute; margin-top: 0.6rem; margin-bottom: 0.6rem; top: 0; bottom: 0; right: 0.6rem; border-radius: 0.6rem; padding: 0.4rem 0.8rem; display: flex; align-items: center; justify-content:center");
+    timeStamp.setAttribute("style", "background-color: #4694fa; color: white; position: absolute; margin-top: 0.6rem; margin-bottom: 0.6rem; top: 0; bottom: 0; right: 0.6rem; border-radius: 0.6rem; padding: 0.4rem 0.8rem; display: flex; align-items: center; justify-content:center");
     timeStamp.textContent = segment.start;
     div.appendChild(timeStamp);
 });
@@ -119,17 +118,21 @@ function isSeekedWithinSegment(startTime, seekTime, endTime) {
     return startTime <= seekTime && seekTime <= endTime;
 }
 
+
 timeTooltip.update = function (seekBarRect, seekBarPoint, time) {
     let seekTimeArr = timeStringToSeconds(time);
     segmentsData.map((segment)=>{
-        if(isSeekedWithinSegment(timeStringToSeconds(segment.start), seekTimeArr, timeStringToSeconds(segment.end)))
+        if(isSeekedWithinSegment(timeStringToSeconds(segment.start), seekTimeArr, timeStringToSeconds(segment.end))){
             this.write(`${segment.title} [${time}]`)
+            console.log(this)
+        }
     })
 }
+
 
 player.spriteThumbnails({
     interval:1,
     url: './sample.mp4.png',
     width: 160,
-    height: 90
+    height: 90,
 });
