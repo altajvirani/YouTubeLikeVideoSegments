@@ -80,7 +80,7 @@ This project integrates Video.js to create a responsive and customizable video p
 ## Disadvantages
 
 - **Thumbnail Generation Time:**
-  - The current version of the project does not support runtime thumbnail generation. However, potential enhancements could include the development of a Flask API that sends back the generated thumbnail image upon request. Alternatively, a more efficient approach could involve generating and storing the thumbnail image in the database at the time of video upload. Accessing the pre-generated image from the database would significantly improve efficiency compared to generating it on the client-side every time a user views a video.
+  - The current version of the project does not support runtime thumbnail generation. However, potential enhancements could include generating and storing the thumbnail image in the database at the time of video upload. Accessing the pre-generated image from the database would significantly improve efficiency compared to generating it on the client-side every time a user views a video.
 
 ## Acknowledgments
 
